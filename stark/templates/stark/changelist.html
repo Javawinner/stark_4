@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{ model_name }}表</h1>
+<table border="1px">
+
+    <thead>
+    <tr>
+        {% for header in header_list %}
+            <th>{{ header }}</th>
+        {% endfor %}
+
+    </tr>
+    </thead>
+    <tbody>
+{#    [['周泽SB', 88, 'paowang@bb.com'], ['胡鸿鹏SB', 99, 'dssdkjd@sb.com']]#}
+
+        {% for row in body_list %}
+        <tr>
+                {% for col in row %}
+                <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        
+
+    </tbody>
+</table>
+</body>
+</html>
